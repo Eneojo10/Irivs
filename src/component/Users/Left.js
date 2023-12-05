@@ -139,17 +139,9 @@ function Left() {
               </Link>
             </div>
 
-            {/* <br />
-          <br />
-          <div className='drk'>
-            <Dark />
-          </div>
-          <br />
-          <br />
-          <br />
-          <br />
+            
 
-          <Logout /> */}
+        
           </div>
         </div>
       ) : (

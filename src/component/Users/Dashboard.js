@@ -1,13 +1,12 @@
 import React, { useState, useEffect} from 'react';
 import Left from './Left';
 import Navigations from './Navigations';
-// import { Link } from 'react-router-dom';
 import axios from 'axios';
-// import image from '../image/user2.jpg'
+
 
 function Dashboard() {
   const [artisan, setArtisan] = useState([]);
-  // const [leftSidebarHeight, setLeftSidebarHeight] = useState(0);
+
   
  let is_admin = localStorage.getItem('role');
  let is_logged_in = localStorage.getItem('user_id');
