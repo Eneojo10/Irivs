@@ -1033,6 +1033,7 @@ li:last-child {
 .main--side{
   width: 90%;
 }
+
 @media(max-width: 425px){
   .rr{
     display: none;
@@ -1248,7 +1249,8 @@ li:last-child {
   .password-icon{
     position: absolute;
     left: 75%;
-    top: 50%;
+    top: 47%;
+    display: none;
   }
   .profile__image{
     width: 100%;
