@@ -19,7 +19,7 @@ export default function AuthProvider({ children }) {
     } else {
       setIsLoggedIn(false);
     }
-  }, [setIsLoggedIn]); 
+  }, [setIsLoggedIn]);
 
   const runLogin = async (email, password) => {
     let { data, error } = '';
