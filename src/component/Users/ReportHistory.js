@@ -14,13 +14,11 @@ function ReportHistory() {
           <Navigations />
           <br />
 
-          <div className='sendreport-border'>
-            
-          </div>
+          <div className='sendreport-border'></div>
         </div>
       </div>
     </div>
   );
 }
 
-export default ReportHistory
+export default ReportHistory;

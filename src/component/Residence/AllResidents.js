@@ -111,14 +111,11 @@ function AllResidents() {
     });
 
     setCombinedData(filteredData);
-    
 
     setFilterEmail('');
     setFilterIdentificationCode('');
     setFilterName('');
   };
-
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -160,7 +157,6 @@ function AllResidents() {
 
     fetchData();
   }, []);
-
 
   // useEffect(() => {
   //   const fetchResidence = async () => {
