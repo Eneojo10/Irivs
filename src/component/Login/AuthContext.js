@@ -25,7 +25,7 @@ export default function AuthProvider({ children }) {
     let { data, error } = '';
     try {
       const response = await axios.post(
-        'https://garen-server.onrender.com/login',
+        'https://garen-server.onrender.com/auth/login',
         {
           email,
           password,
