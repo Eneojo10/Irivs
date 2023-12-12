@@ -6,7 +6,7 @@ import { GoSignIn } from 'react-icons/go';
 import { Link } from 'react-router-dom';
 
 import image from '../image/logo_image.png';
-// import { AuthContext } from '../Login/AuthContext';
+
 
 function Left() {
   
