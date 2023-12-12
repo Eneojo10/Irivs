@@ -22,7 +22,9 @@ function PaymentCompliance() {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/payments');
+        const response = await axios.get(
+          'https://garen-server.onrender.com/payments'
+        );
         console.log(response.data);
         setPaymentData(response.data);
       } catch (error) {
@@ -37,7 +39,7 @@ function PaymentCompliance() {
     const fetchActivePaymentsCounts = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:5000/payments/active-count'
+          'https://garen-server.onrender.com/active-count'
         );
         setActive_resident(response.data.active_resident);
       } catch (error) {
@@ -52,7 +54,7 @@ function PaymentCompliance() {
     const fetchResidentCount = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:5000/register/total'
+          'https://garen-server.onrender.com/register/total'
         );
 
         const count = response.data;

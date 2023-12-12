@@ -57,7 +57,7 @@ function SendReport() {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/ireports',
+        'https://garen-server.onrender.com/ireports',
         formDataToSend,
         {
           headers: {

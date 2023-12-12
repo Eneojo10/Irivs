@@ -59,7 +59,7 @@ function AddArtisan() {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/artisan',
+        'https://garen-server.onrender.com/artisan',
         formData,
         {
           headers: {

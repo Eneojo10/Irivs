@@ -25,7 +25,7 @@ const SingleResidentProfile = () => {
       setLoadingStates((prevState) => ({ ...prevState, [ireportId]: true }));
       try {
         const response = await axios.get(
-          `http://localhost:5000/ireports/${ireportId}`
+          `https://garen-server.onrender.com/ireports/${ireportId}`
         );
 
         console.log(response.data);

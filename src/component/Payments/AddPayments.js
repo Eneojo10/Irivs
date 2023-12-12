@@ -39,11 +39,14 @@ function AddPayments() {
     const fetchPayments = async () => {
       try {
         const user_id = localStorage.getItem('user_id');
-        const response = await axios.get('http://localhost:5000/payments/all', {
-          params: {
-            user_id,
-          },
-        });
+        const response = await axios.get(
+          'https://garen-server.onrender.com/all',
+          {
+            params: {
+              user_id,
+            },
+          }
+        );
         // console.log('Response:', response);
         setPayments(response.data);
       } catch (error) {

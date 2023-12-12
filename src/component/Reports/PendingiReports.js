@@ -23,7 +23,9 @@ function PendingiReports() {
   useEffect(() => {
     const fetchReport = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/ireports');
+        const response = await axios.get(
+          'https://garen-server.onrender.com/ireports'
+        );
         setIreport(response.data);
       } catch (error) {
         console.error(error);

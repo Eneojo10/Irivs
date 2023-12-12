@@ -48,11 +48,14 @@ function CreateEstate() {
         estate_id,
       };
 
-      const response = await axios.post('http://localhost:5000/admin', {
-        user_id,
-        estate_id: selectedEstate,
-        ...adminData,
-      });
+      const response = await axios.post(
+        'https://garen-server.onrender.com/admin',
+        {
+          user_id,
+          estate_id: selectedEstate,
+          ...adminData,
+        }
+      );
       alert('Admin created!!!');
       console.log(response);
       setFullname('');
@@ -76,7 +79,9 @@ function CreateEstate() {
   useEffect(() => {
     const fetchEstate = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/estates');
+        const response = await axios.get(
+          'https://garen-server.onrender.com/estates'
+        );
         setEstates(response.data);
         console.log(response)
       } catch (error) {

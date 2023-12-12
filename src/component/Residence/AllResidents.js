@@ -73,7 +73,7 @@ function AllResidents() {
       due_date,
     };
 
-    const paymentEndpoint = 'http://localhost:5000/payments';
+    const paymentEndpoint = 'https://garen-server.onrender.com/payments';
 
     axios
       .post(paymentEndpoint, Residencepayments)
@@ -128,17 +128,20 @@ function AllResidents() {
         if (storedData) {
           setCombinedData(JSON.parse(storedData));
         } else {
-          const responseUsers = await axios.get('http://localhost:5000/users', {
-            params: {
-              user_id,
-            },
-          });
+          const responseUsers = await axios.get(
+            'https://garen-server.onrender.com/users',
+            {
+              params: {
+                user_id,
+              },
+            }
+          );
 
           const responseResidence = await axios.get(
-            'http://localhost:5000/residence'
+            'https://garen-server.onrender.com/residence'
           );
           const responseStatus = await axios.get(
-            'http://localhost:5000/status'
+            'https://garen-server.onrender.com/status'
           );
 
           const data = combineData(

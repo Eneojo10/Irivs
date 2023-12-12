@@ -51,7 +51,7 @@ function ResidentForm() {
   });
 
   useEffect(() => {
-    axios.get('http://localhost:5000/status').then((response) => {
+    axios.get('https://garen-server.onrender.com/status').then((response) => {
       setResidenceStatus(response.data);
 
       console.log(response);
@@ -147,7 +147,7 @@ function ResidentForm() {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/users',
+        'https://garen-server.onrender.com/users',
         formData,
         {
           // timeout: 10000,

@@ -13,7 +13,9 @@ const SearchForm = ({ onSearch }) => {
 
     try {
       console.log('Searching for:', searchTerm);
-      const response = await axios.get(`http://localhost:5000/search/${searchTerm}`);
+      const response = await axios.get(
+        `https://garen-server.onrender.com/search/${searchTerm}`
+      );
       console.log('Search results:', response.data);
       setSearchResults(response.data);
     } catch (error) {

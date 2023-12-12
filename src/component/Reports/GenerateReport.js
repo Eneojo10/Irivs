@@ -61,7 +61,9 @@ function GenerateReport() {
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/residence');
+        const response = await axios.get(
+          'https://garen-server.onrender.com/residence'
+        );
         setHomeStatus(response.data);
 
         console.log(response);

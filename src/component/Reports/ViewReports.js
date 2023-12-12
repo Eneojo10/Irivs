@@ -62,7 +62,9 @@ function ViewReports() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/ireports');
+        const response = await axios.get(
+          'https://garen-server.onrender.com/ireports'
+        );
         const storedReadStatus =
           JSON.parse(localStorage.getItem('ireportsReadStatus')) || {};
         const updatedIreports = response.data.map((ireport) => ({

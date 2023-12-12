@@ -22,7 +22,7 @@ function Dashboard() {
         const loggedInUserId = localStorage.getItem('user_id');
 
         const response = await axios.get(
-          `http://localhost:5000/artisan?user_id=${loggedInUserId}`
+          `https://garen-server.onrender.com/artisan?user_id=${loggedInUserId}`
           // {
           //   params: {
           //     // role: 'USER',

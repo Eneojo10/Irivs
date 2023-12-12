@@ -24,10 +24,13 @@ export default function AuthProvider({ children }) {
   const runLogin = async (email, password) => {
     let { data, error } = '';
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        'https://garen-server.onrender.com/login',
+        {
+          email,
+          password,
+        }
+      );
       return { data: response.data, error: null };
     } catch (err) {
       console.error(err);

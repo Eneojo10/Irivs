@@ -32,12 +32,13 @@ function AddArtisan() {
   const fetchArtisan = async () => {
     try {
       const user_id = localStorage.getItem('user_id');
-      const response = await axios.get('http://localhost:5000/artisan', {
-        params: {
-          user_id,
-        },
-      }
-
+      const response = await axios.get(
+        'https://garen-server.onrender.com/artisan',
+        {
+          params: {
+            user_id,
+          },
+        }
       );
       console.log('Response:', response.data.data);
       setArtisan(response.data);

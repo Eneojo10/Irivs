@@ -24,7 +24,7 @@ function Navigations() {
   const fetchUnreadNotificationCount = async (user_id) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/ireports/notifications/${user_id}`
+        `https://garen-server.onrender.com/ireports/notifications/${user_id}`
       );
       console.log(user_id);
       console.log(response.data);

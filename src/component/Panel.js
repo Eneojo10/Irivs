@@ -33,7 +33,7 @@ function Panel() {
     const fetchActivePaymentsCount = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:5000/payments/active-count'
+          'https://garen-server.onrender.com/payments/active-count'
         );
         setActivePayments(response.data.activePayments);
       } catch (error) {
@@ -47,7 +47,9 @@ function Panel() {
   useEffect(() => {
     async function fetchPaymentData() {
       try {
-        const response = await axios.get('http://localhost:5000/payments');
+        const response = await axios.get(
+          'https://garen-server.onrender.com/payments'
+        );
         setPaymentData(response.data);
       } catch (error) {
         console.error(error);
@@ -75,7 +77,9 @@ function Panel() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/users');
+      const response = await axios.get(
+        'https://garen-server.onrender.com/users'
+      );
       setUsers(response.data);
 
       const adminUsers = response.data.filter((user) => user.isAdmin);
@@ -87,7 +91,9 @@ function Panel() {
 
   const fetchIreportCount = async (user_id) => {
     try {
-      const response = await axios.get(`http://localhost:5000/ireports/total/${user_id}`);
+      const response = await axios.get(
+        `https://garen-server.onrender.com/ireports/total/${user_id}`
+      );
 
       const count = response.data.total_ireports;
       
@@ -99,7 +105,9 @@ function Panel() {
 
   const fetchResidentCount = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/users/total');
+      const response = await axios.get(
+        'https://garen-server.onrender.com/users/total'
+      );
 
       const count = response.data;
 
@@ -111,7 +119,9 @@ function Panel() {
 
   const fetchIreport = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/ireports');
+      const response = await axios.get(
+        'https://garen-server.onrender.com/ireports'
+      );
 
       // console.log('Response:', response.data);
       const storedReadStatus =

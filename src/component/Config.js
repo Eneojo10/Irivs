@@ -21,7 +21,7 @@ function Config() {
 
     try {
       const response = await axios
-        .post('http://localhost:5000/residence', data)
+        .post('https://garen-server.onrender.com/residence', data)
         .then((res) => setSender(res.sender));
       alert('created');
 
@@ -38,7 +38,7 @@ function Config() {
 
     try {
       const response = await axios
-        .post('http://localhost:5000/status', data)
+        .post('https://garen-server.onrender.com/status', data)
         .then((res) => setResident(res.sender));
       alert('created');
 
@@ -50,7 +50,9 @@ function Config() {
 
   const fetchDetails = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/residence');
+      const response = await axios.get(
+        'https://garen-server.onrender.com/residence'
+      );
       setCategory(response.data);
 
       console.log(response);
@@ -61,7 +63,9 @@ function Config() {
 
   const fetchAll = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/status');
+      const response = await axios.get(
+        'https://garen-server.onrender.com/status'
+      );
       setPeople(response.data);
 
       console.log(response);
