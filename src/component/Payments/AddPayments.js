@@ -33,8 +33,6 @@ function AddPayments() {
   let isAdmin = is__isAdmin === 'ADMIN' ? true : false;
   let isLoggedIn = is_logged_in ? true : false;
 
-
-  
   useEffect(() => {
     const fetchPayments = async () => {
       try {
@@ -55,7 +53,7 @@ function AddPayments() {
     };
 
     fetchPayments();
-  },[]);
+  }, []);
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
