@@ -20,10 +20,13 @@ function CreateEstate() {
 
       console.log('USER ID:', user_id);
 
-      const response = await axios.post('http://localhost:5000/estates', {
-        user_id,
-        estateName,
-      });
+      const response = await axios.post(
+        'https://garen-server.onrender.com/estates',
+        {
+          user_id,
+          estateName,
+        }
+      );
       alert('Estate Created!!!');
       console.log(response);
       setEstateName('');
