@@ -310,14 +310,7 @@ function GenerateReport() {
                     
                   </div>
                   <div className='generate_input_field'>
-                    {/* <div>
-                      <input
-                        type='text'
-                        placeholder='Enter Your First Name'
-                        value={firstname}
-                        onChange={(e) => setFirstname(e.target.value)}
-                      />
-                    </div> */}
+                    
                     
                     <div>
                       <input
