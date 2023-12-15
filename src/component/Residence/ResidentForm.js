@@ -281,7 +281,7 @@ function ResidentForm() {
                       />
                     </div>
                   </div>
-                  <br/>
+                  <br />
                   <div className='text-details d-flex justify-content-between'>
                     <h4>Created on:</h4>
                     <div className='date-section'>
@@ -422,7 +422,10 @@ function ResidentForm() {
                     </div>
                   </div>
                   <br />
-                  <div className='text-details d-flex justify-content-between'>
+                  <div
+                    className='text-details_
+                   d-flex justify-content-between'
+                  >
                     <h4>Upload Photo:</h4>
                     <div className='residents_File'>
                       <input
@@ -529,6 +532,20 @@ function ResidentForm() {
                         value={email}
                         onChange={handleEmailChange}
                         autoComplete='none'
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div className='te'>
+                    <h6>Password:</h6>
+                    <div>
+                      <input
+                        type='password'
+                        name='password'
+                        placeholder='Enter Password'
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        autoComplete='new-password'
                       />
                     </div>
                   </div>
@@ -674,7 +691,7 @@ function ResidentForm() {
                   </div>
                   <br />
 
-                  <div className='te'>
+                  {/* <div className='te'>
                     <h6>Previous_Owner Name:</h6>
                     <div>
                       <input
@@ -715,7 +732,7 @@ function ResidentForm() {
                       />
                     </div>
                   </div>
-                  <br />
+                  <br /> */}
                   <div>
                     <h6>Upload Photo:</h6>
                     <div>

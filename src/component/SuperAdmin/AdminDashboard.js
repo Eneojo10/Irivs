@@ -29,18 +29,20 @@ function AdminDashboard() {
               <h5>TOTAL ESTATE</h5>
             </div>
           </div>
-        </div><br/>
+        </div>
+        <br />
         <div className='admin-card_One'>
           <div className='admin-card'>
             <div className='adminbaord-text'>
               <h5>TOTAL ADMIN</h5>
             </div>
           </div>
-        </div><br/>
+        </div>
+        <br />
         <div className='admin-card_One'>
           <div className='admin-card'>
             <div className='adminbaord-text'>
-              <h5>TOTAL ESTATE</h5>
+              <h5>TOTAL ADMIN</h5>
             </div>
           </div>
         </div>

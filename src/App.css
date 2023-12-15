@@ -39,6 +39,13 @@
 .pro_file{
   width: 75%;
 }
+.form_details{
+  width: 91%;
+  margin: auto;
+  padding-top: 45px;
+  justify-content: space-between;
+  display: flex;
+}
 .details__image{
   width: 100%;
 }
@@ -234,6 +241,9 @@
 .mhs h4 {
   font-size: 13px;
 }
+.form_details_media{
+  display: none;
+}
 .line {
   text-decoration: none;
 }
@@ -381,6 +391,9 @@
   outline: none;
 }
 .text-details h4 {
+  font-size: 17px;
+}
+.text-details_ h4{
   font-size: 17px;
 }
 .sel-ect {
@@ -631,6 +644,9 @@ form.example button:hover {
   outline: none;
   background-color: #edf3f8;
   width: 100%;
+}
+.generate_input_field{
+  width: 27%;
 }
 .generate_select select {
   width: 100%;
@@ -1038,6 +1054,25 @@ li:last-child {
   .rr{
     display: none;
   }
+  .config_box{
+    display: block;
+  }
+  .boxx_{
+    width: 100%;
+  }
+  .config_border{
+    height: 157vh;
+  }
+  .generate_input_field{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .generate_input_field input{
+    width: 100%;
+  }
+  .form_details{
+    display: block;
+  }
   .main--side{
     width: 100%;
   }
@@ -1055,6 +1090,15 @@ li:last-child {
   .table td {
     white-space: nowrap;
     min-width: 100px;
+  }
+  .form_details{
+    display: none;
+  }
+  .form_details_media{
+    display: block;
+    padding-top: 30px;
+    width: 90%;
+    margin: auto;
   }
   .example{
     display: none;

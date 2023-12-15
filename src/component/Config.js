@@ -113,7 +113,7 @@ function Config() {
                 <div className='config__border'>
                   <br />
                   <br />
-                  <br />
+                
                   <div className='config_box'>
                     <div className='boxx_'>
                       <div className='box_1'>
@@ -126,9 +126,7 @@ function Config() {
                           
                         </div>
                       </div>
-
-                      <br />
-                      <br />
+                      
                       <form className='configform' onSubmit={handleSave}>
                         <input
                           type='text'
@@ -141,7 +139,7 @@ function Config() {
                           Add
                         </button>
                       </form>
-                    </div>
+                    </div><br/><br/>
                     <div className='boxx_'>
                       <div className='box_1'>
                         <div className='box_1details'>
@@ -153,8 +151,8 @@ function Config() {
                           
                         </div>
                       </div>
-                      <br />
-                      <br />
+                      
+                      
                       <form className='configform' onSubmit={handleAdd}>
                         <input
                           type='text'
@@ -167,7 +165,7 @@ function Config() {
                           Add
                         </button>
                       </form>
-                    </div>
+                    </div><br/><br/>
                     <div className='boxx_'>
                       <div className='box_1'>
                         <div className='box_1details'>
@@ -176,8 +174,8 @@ function Config() {
                           </div>
                         </div>
                       </div>
-                      <br />
-                      <br />
+                      
+                  
                       <form className='configform'>
                         <input type='text' />
 

@@ -164,7 +164,7 @@ function AddArtisan() {
                     </div>
                   </div>
                   <br />
-                  <div className='arti-san-field d-flex justify-content-between'>
+                  <div className='arti-san-field_ d-flex justify-content-between'>
                     <h6>Avatar</h6>
                     <div>
                       <input
@@ -232,7 +232,20 @@ function AddArtisan() {
                       />
                     </div>
                   </div>
-
+                  <br />
+                  <div className='arti-san-field_'>
+                    <h6>Avatar</h6>
+                    <div>
+                      <input
+                        type='file'
+                        placeholder='Enter phone Number'
+                        name='avatar'
+                        onChange={handleAvatarChange}
+                        autoComplete='no'
+                      />
+                    </div>
+                  </div>
+                  <br/>
                   <div className='resident-button'>
                     <button
                       onClick={(e) => {

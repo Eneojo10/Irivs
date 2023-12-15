@@ -122,7 +122,7 @@ function PendingiReports() {
                 <div className='all_residents--inputfield'>
                   <div className='media_input d-flex gap-3'>
                     <div className='input-field'>
-                      <input type='text' placeholder='Enter code' />
+                      <input type='text' placeholder='Enter Name' />
                     </div>
                     <div className='input-field'>
                       <input type='text' placeholder='Filter By Risk' />

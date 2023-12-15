@@ -16,7 +16,7 @@ function HamburgerMenu() {
         <div className='line'></div>
       </button>
       <nav className='menu'>
-        <div>
+        <div className='hamburger-three'>
           <AdminSideBar />
         </div>
       </nav>

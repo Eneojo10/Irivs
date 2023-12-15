@@ -108,19 +108,8 @@ function GenerateReport() {
                   borderTop: 'none',
                 }}
               >
-                <form
-                  className='form_details d-flex'
-                  style={{
-                    width: '91%',
-                    margin: 'auto',
-                    paddingTop: '45px',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div
-                    className='generate_input_field'
-                    style={{ width: '27%' }}
-                  >
+                <form className='form_details'>
+                  <div className='generate_input_field'>
                     <div>
                       <input
                         type='text'
@@ -210,10 +199,7 @@ function GenerateReport() {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className='generate_input_field'
-                    style={{ paddingTop: '60px', width: '30%' }}
-                  >
+                  <div className='generate_input_field'>
                     <div>
                       <input
                         type='text'
@@ -257,10 +243,7 @@ function GenerateReport() {
                       />
                     </div>
                   </div>
-                  <div
-                    className='generate_input_field'
-                    style={{ marginTop: '60px', width: '30%' }}
-                  >
+                  <div className='generate_input_field'>
                     <div>
                       <input type='text' />
                     </div>
@@ -275,6 +258,142 @@ function GenerateReport() {
                     <br />
                     <div>
                       <input type='text' />
+                    </div>
+                  </div>
+                </form>
+                <form className='form_details_media'>
+                  <div className='generate_input_field'>
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter identification code'
+                        value={identificationCode}
+                        onChange={(e) => setIdentificationCode(e.target.value)}
+                      />
+                    </div>
+                    <br />
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter your surname'
+                        value={surname}
+                        onChange={(e) => setSurname(e.target.value)}
+                      />
+                    </div>
+                    <br />
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter a Functional Email Please'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </div>
+                    <br />
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter Phone Number'
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                      />
+                    </div>
+                    <br />
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter House Number'
+                        value={house_number}
+                        onChange={(e) => setHouseNumber(e.target.value)}
+                      />
+                    </div>
+                    
+                  </div>
+                  <div className='generate_input_field'>
+                    {/* <div>
+                      <input
+                        type='text'
+                        placeholder='Enter Your First Name'
+                        value={firstname}
+                        onChange={(e) => setFirstname(e.target.value)}
+                      />
+                    </div> */}
+                    
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Search By Date'
+                        value={searchDate}
+                        onChange={(e) => setSearchDate(e.target.value)}
+                      />
+                    </div>
+                    <br />
+                    <div className='generate_select'>
+                      <select
+                        name='residence_id'
+                        value={residence_id}
+                        onChange={handleHomeStatusChange}
+                      >
+                        <option>Select Home Status</option>
+                        {home_status &&
+                          home_status.map((e) => (
+                            <option key={e._id} value={e._id}>
+                              {e.category}
+                            </option>
+                          ))}
+                      </select>
+                    </div>
+                    <br />
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter Street'
+                        value={street}
+                        onChange={(e) => setStreet(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className='generate_buttons d-flex gap-1'>
+                    <div>
+                      <button
+                        className='generate_button'
+                        type='submit'
+                        style={{
+                          border: 'none',
+                          background: 'none',
+                          backgroundColor: '#669906',
+                          color: 'white',
+                          padding: '5px 25px',
+                        }}
+                        onClick={handleFilter}
+                      >
+                        Filter
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        className='generate_button'
+                        style={{
+                          border: 'none',
+                          background: 'none',
+                          backgroundColor: '#669906',
+                          color: 'white',
+                          padding: '5px 35px',
+                        }}
+                        onClick={() => {
+                          setIdentificationCode('');
+                          setSurname('');
+                          setEmail('');
+                          setPhone('');
+                          setHouseNumber('');
+                          setFirstname('');
+                          setSearchDate('');
+                          setHomes('');
+                          setStreet('');
+                        }}
+                      >
+                        Clear Fields
+                      </button>
                     </div>
                   </div>
                 </form>
