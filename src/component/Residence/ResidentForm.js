@@ -48,7 +48,7 @@ function ResidentForm() {
 
       console.log(response);
     });
-  });
+  },[]);
 
   useEffect(() => {
     axios.get('https://garen-server.onrender.com/status').then((response) => {
@@ -56,7 +56,7 @@ function ResidentForm() {
 
       console.log(response);
     });
-  });
+  },[]);
 
   const handleFnameChange = (event) => {
     setFirstname(event.target.value);
