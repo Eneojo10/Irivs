@@ -240,31 +240,55 @@ function Panel() {
               <br />
               <div className='media_card'>
                 <div className='media_card_section'>
-                  <div className='mediaCard_sec1'>
+                  <div className='mediaCard_sec1 d-flex'>
                     <div className='media_1'>
                       <h6>Total Registered Residents</h6>
                       <h5>{residenceCount}</h5>
                     </div>
+
+                    <div className='card-color text-white'>
+                      <span className='card-icon'>
+                        <HiOutlineHome />
+                      </span>
+                    </div>
                   </div>
-                  <div className='mediaCard_sec2'>
+                  <div className='mediaCard_sec2 d-flex'>
                     <div className='media_1'>
                       <h6>Total Submitted iReports</h6>
                       <h5>{ireportCount}</h5>
+                    </div>
+
+                    <div className='card-colorTwo text-white'>
+                      <span className='card-icon'>
+                        <HiOutlineDocumentReport />
+                      </span>
                     </div>
                   </div>
                 </div>
                 <br />
                 <div className='media_card_section'>
-                  <div className='mediaCard_sec3'>
+                  <div className='mediaCard_sec3 d-flex'>
                     <div className='media_1'>
                       <h6>System Administrators</h6>
                       <h5>{totalAdminUsers}</h5>
                     </div>
+
+                    <div className='card-colorThr text-white'>
+                      <span className='card-icon'>
+                        <HiUsers />
+                      </span>
+                    </div>
                   </div>
-                  <div className='mediaCard_sec4'>
+                  <div className='mediaCard_sec4 d-flex'>
                     <div className='media_1'>
                       <h6>Active Payments</h6>
                       <h5>{paymentData.length}</h5>
+                    </div>
+
+                    <div className='card-colorFr text-white'>
+                      <span className='card-icon'>
+                        <TbRadioactive />
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -309,7 +333,7 @@ function Panel() {
                   <br />
                   <br />
                   <div className='x-box-cont d-flex'>
-                    <strong>
+                    {/* <strong>
                       Desktop<p className='parag'>50%</p>
                     </strong>
                     <strong>
@@ -317,7 +341,7 @@ function Panel() {
                     </strong>
                     <strong>
                       Mobile<p className='paragg'>32%</p>
-                    </strong>
+                    </strong> */}
                   </div>
                 </div>
               </div>

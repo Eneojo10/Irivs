@@ -10,11 +10,8 @@ function Config() {
   const [category, setHomeStatus] = useState('');
   const [resident, setResident] = useState('');
   const [sender, setSender] = useState('');
-
-  useEffect(() => {
-    fetchDetails();
-    fetchAll();
-  }, []);
+  const [send, setSend] = useState('');
+  
 
   const handleSave = async () => {
     let data = { category };
@@ -39,40 +36,50 @@ function Config() {
     try {
       const response = await axios
         .post('https://garen-server.onrender.com/status', data)
-        .then((res) => setResident(res.sender));
+        .then((res) => setSend(res.send));
       alert('created');
 
       console.log(response);
+
+      resident('');
     } catch (error) {
       console.error(error);
     }
   };
 
-  const fetchDetails = async () => {
-    try {
-      const response = await axios.get(
-        'https://garen-server.onrender.com/residence'
-      );
-      setCategory(response.data);
+  useEffect (() => {
+    const fetchDetails = async () => {
+      try {
+        const response = await axios.get(
+          'https://garen-server.onrender.com/residence'
+        );
+        setCategory(response.data);
 
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-  const fetchAll = async () => {
-    try {
-      const response = await axios.get(
-        'https://garen-server.onrender.com/status'
-      );
-      setPeople(response.data);
+    fetchDetails();
+  },[]);
 
-      console.log(response);
-    }catch(error) {
-      console.error(error);
-    }
-  };
+  useEffect(() => {
+    const fetchAll = async () => {
+      try {
+        const response = await axios.get(
+          'https://garen-server.onrender.com/status'
+        );
+        setPeople(response.data);
+
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchAll();
+  },[]);
   
   return (
     <div>
@@ -113,7 +120,7 @@ function Config() {
                 <div className='config__border'>
                   <br />
                   <br />
-                
+
                   <div className='config_box'>
                     <div className='boxx_'>
                       <div className='box_1'>
@@ -123,14 +130,13 @@ function Config() {
                               <h6>{categoryName.category}</h6>
                             </div>
                           ))}
-                          
                         </div>
                       </div>
-                      
+
                       <form className='configform' onSubmit={handleSave}>
                         <input
                           type='text'
-                          placeholder='Enter Home Status'
+                          placeholder='Enter Residential Status'
                           value={category}
                           onChange={(e) => setHomeStatus(e.target.value)}
                         />
@@ -139,7 +145,9 @@ function Config() {
                           Add
                         </button>
                       </form>
-                    </div><br/><br/>
+                    </div>
+                    <br />
+                    <br />
                     <div className='boxx_'>
                       <div className='box_1'>
                         <div className='box_1details'>
@@ -148,15 +156,13 @@ function Config() {
                               <h6>{residentName.resident}</h6>
                             </div>
                           ))}
-                          
                         </div>
                       </div>
-                      
-                      
+
                       <form className='configform' onSubmit={handleAdd}>
                         <input
                           type='text'
-                          placeholder='Enter Residential Status'
+                          placeholder='Enter Home Status'
                           value={resident}
                           onChange={(e) => setResident(e.target.value)}
                         />
@@ -165,7 +171,9 @@ function Config() {
                           Add
                         </button>
                       </form>
-                    </div><br/><br/>
+                    </div>
+                    <br />
+                    <br />
                     <div className='boxx_'>
                       <div className='box_1'>
                         <div className='box_1details'>
@@ -174,8 +182,7 @@ function Config() {
                           </div>
                         </div>
                       </div>
-                      
-                  
+
                       <form className='configform'>
                         <input type='text' />
 

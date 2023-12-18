@@ -4,8 +4,6 @@ import Compo from '../Compo';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
 import { IoMdArrowDropdown } from 'react-icons/io';
 
 function AddArtisan() {
@@ -13,17 +11,19 @@ function AddArtisan() {
     artisanFullname: '',
     artisanSpecialty: '',
     artisanContact: '',
+    artisanEmail: '',
+    aboutArtisan: '',
+    artisanId: '',
     user_id: '',
     avatar: null,
   });
 
   useEffect(() => {
-    
     const storedUserId = localStorage.getItem('user_id');
     if (storedUserId) {
       setArtisanData({ ...artisanData, user_id: storedUserId });
     }
-  },[]); 
+  }, []);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -40,6 +40,15 @@ function AddArtisan() {
     });
   };
 
+
+  const handleTextareaChange = (event) => {
+    setArtisanData({
+      ...artisanData,
+      aboutArtisan: event.target.value,
+    });
+  };
+
+
   let is__isAdmin = localStorage.getItem('role');
   let is_logged_in = localStorage.getItem('user_id');
 
@@ -47,15 +56,15 @@ function AddArtisan() {
   let isLoggedIn = is_logged_in ? true : false;
 
   const handleSubmit = async () => {
-  
-
     const formData = new FormData();
     formData.append('avatar', artisanData.avatar);
     formData.append('artisanFullname', artisanData.artisanFullname);
     formData.append('artisanSpecialty', artisanData.artisanSpecialty);
     formData.append('artisanContact', artisanData.artisanContact);
+    formData.append('artisanEmail', artisanData.artisanEmail);
+    formData.append('aboutArtisan', artisanData.aboutArtisan);
+    formData.append('artisanId', artisanData.artisanId);
     formData.append('user_id', is_logged_in);
-   
 
     try {
       const response = await axios.post(
@@ -67,14 +76,17 @@ function AddArtisan() {
           },
         }
       );
-      
+
       console.log('Artisan added:', response.data);
 
       setArtisanData({
         artisanFullname: '',
         artisanSpecialty: '',
         artisanContact: '',
-        user_id: '', 
+        artisanEmail: '',
+        artisanId: '',
+        aboutArtisan: '',
+        user_id: '',
         avatar: null,
       });
 
@@ -83,7 +95,7 @@ function AddArtisan() {
       });
     } catch (error) {
       console.error('Error adding artisan:', error);
-      
+
       toast.error('Error adding artisan. Please try again.', {
         position: toast.POSITION.TOP_RIGHT,
       });
@@ -123,7 +135,7 @@ function AddArtisan() {
               <div className='artisan-border'>
                 <div className='atisan--input-field'>
                   <div className='arti-san-field d-flex justify-content-between'>
-                    <h6>Full Name</h6>
+                    <h6>Artisan Fullname</h6>
                     <div>
                       <input
                         type='text'
@@ -151,6 +163,20 @@ function AddArtisan() {
                   </div>
                   <br />
                   <div className='arti-san-field d-flex justify-content-between'>
+                    <h6>Artisan Email</h6>
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter Email'
+                        name='artisanEmail'
+                        value={artisanData.artisanEmail}
+                        onChange={handleInputChange}
+                        autoComplete='no'
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div className='arti-san-field d-flex justify-content-between'>
                     <h6>Artisan Contact</h6>
                     <div>
                       <input
@@ -164,6 +190,21 @@ function AddArtisan() {
                     </div>
                   </div>
                   <br />
+                  <div className='arti-san-field d-flex justify-content-between'>
+                    <h6>Artisan ID</h6>
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter ID '
+                        name='artisanId'
+                        value={artisanData.artisanId}
+                        onChange={handleInputChange}
+                        autoComplete='no'
+                      />
+                    </div>
+                  </div>
+                  <br />
+
                   <div className='arti-san-field_ d-flex justify-content-between'>
                     <h6>Avatar</h6>
                     <div>
@@ -173,6 +214,18 @@ function AddArtisan() {
                         name='avatar'
                         onChange={handleAvatarChange}
                         autoComplete='no'
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div className='arti-san-field___'>
+                    <h6>About Artisan</h6>
+                    <div>
+                      <textarea
+                        placeholder='Enter information about the artisan'
+                        name='aboutArtisan'
+                        value={artisanData.aboutArtisan}
+                        onChange={handleTextareaChange}
                       />
                     </div>
                   </div>
@@ -210,7 +263,7 @@ function AddArtisan() {
                     <div>
                       <input
                         type='text'
-                        placeholder='Enter Email'
+                        placeholder='Enter Specialty'
                         name='artisanSpecialty'
                         value={artisanData.artisanSpecialty}
                         onChange={handleInputChange}
@@ -220,13 +273,41 @@ function AddArtisan() {
                   </div>
                   <br />
                   <div className='arti-san-field'>
-                    <h6>Phone Number</h6>
+                    <h6>Artisan Email</h6>
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter Email'
+                        name='artisanEmail'
+                        value={artisanData.artisanEmail}
+                        onChange={handleInputChange}
+                        autoComplete='no'
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div className='arti-san-field'>
+                    <h6>Artisan Contact</h6>
                     <div>
                       <input
                         type='text'
                         placeholder='Enter phone Number'
                         name='artisanContact'
                         value={artisanData.artisanContact}
+                        onChange={handleInputChange}
+                        autoComplete='no'
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div className='arti-san-field'>
+                    <h6>Artisan ID</h6>
+                    <div>
+                      <input
+                        type='text'
+                        placeholder='Enter ID'
+                        name='artisanId'
+                        value={artisanData.artisanId}
                         onChange={handleInputChange}
                         autoComplete='no'
                       />
@@ -245,7 +326,19 @@ function AddArtisan() {
                       />
                     </div>
                   </div>
-                  <br/>
+                  <br />
+                  <div className='arti-san-field___'>
+                    <h6>About Artisan</h6>
+                    <div>
+                      <textarea
+                        placeholder='Enter information about the artisan'
+                        name='aboutArtisan'
+                        value={artisanData.aboutArtisan}
+                        onChange={handleTextareaChange}
+                      />
+                    </div>
+                  </div>
+                  <br />
                   <div className='resident-button'>
                     <button
                       onClick={(e) => {
