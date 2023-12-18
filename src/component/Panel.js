@@ -333,15 +333,7 @@ function Panel() {
                   <br />
                   <br />
                   <div className='x-box-cont d-flex'>
-                    {/* <strong>
-                      Desktop<p className='parag'>50%</p>
-                    </strong>
-                    <strong>
-                      Tab<p className='parags'>40%</p>
-                    </strong>
-                    <strong>
-                      Mobile<p className='paragg'>32%</p>
-                    </strong> */}
+                    <h4>Payment Chat</h4>
                   </div>
                 </div>
               </div>
