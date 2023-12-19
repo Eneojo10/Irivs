@@ -29,6 +29,13 @@
   margin: auto;
   gap: 15px;
 }
+.bgg{
+  width: 55%;
+}
+.bgg img{
+  width: 100%;
+  color: white;
+}
 .payment_recs {
   width: 75%;
   margin: auto;
@@ -137,6 +144,7 @@
 }
 .border-line {
   border: 1px solid #cccccc;
+  margin-top: -10px;
 }
 .ff {
   font-size: 16px;
@@ -148,7 +156,7 @@
 .cardOne {
   background-color: #d5e2ee;
   height: 120px;
-  width: 30%;
+  width: 100%;
   justify-content: space-between;
   padding: 10px;
 }

@@ -5,7 +5,7 @@ import { CiSquareQuestion } from 'react-icons/ci';
 import { GoSignIn } from 'react-icons/go';
 import { Link } from 'react-router-dom';
 
-import image from '../image/logo_image.png';
+import image from '../image/irivs.png';
 
 
 function Left() {
@@ -21,7 +21,7 @@ function Left() {
       {isLoggedIn && isSuperAdmin ? (
         <div className='main-panel'>
           <div className='bg-txt'>
-            <br />
+            
             <div className='bgg text-white p-2'>
               <img src={image} alt='' />
             </div>

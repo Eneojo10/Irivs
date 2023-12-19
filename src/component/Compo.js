@@ -7,9 +7,8 @@ import { SiEditorconfig } from 'react-icons/si';
 import { GoSignIn } from 'react-icons/go';
 import { Link } from 'react-router-dom';
 import { TbReportSearch } from 'react-icons/tb';
-// import { FiUsers } from 'react-icons/fi';
 import Dark from './Dark';
-import image from './image/logo_image.png';
+import image from './image/irivs.png';
 
 
 
@@ -19,8 +18,8 @@ function Compo() {
     <div>
       <div className='main-panel'>
         <div className='bg-txt'>
-          <br />
-          <div className='bgg text-white p-2'>
+          
+          <div className='bgg'>
             <img src={image} alt='' />
           </div>
 

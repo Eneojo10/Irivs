@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Compo from '../Compo';
 import { HiOutlineSearch } from 'react-icons/hi';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import Navigation from '../Navigation';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../Login/AuthContext';
+
 
 function ResidentForm() {
   const [firstname, setFirstname] = useState('');
