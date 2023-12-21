@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { css } from '@emotion/react';
 import { PropagateLoader } from 'react-spinners';
+import image from '../image/irivs.png';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -57,14 +58,8 @@ function Login() {
         <div className='signup---page'>
           <div className='sign--up'>
             <div className='login---border'>
-              <div className='login-border '>
-                <div
-                  className='spawn-signin-page'
-                  style={{ textAlign: 'center' }}
-                >
-                  <h4>GAREN</h4>
-                  <p>Estate Management System</p>
-                </div>
+              <div className='irivs'>
+                <img src={image} alt="" />
               </div>
             </div>
             <div className='login-details'>

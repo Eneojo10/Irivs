@@ -329,7 +329,12 @@
   padding-top: 40px;
 }
 .login---border {
-  padding-top: 25px;
+  width: 30%;
+  margin: auto;
+  padding-top: 15px;
+}
+.irivs img{
+  width: 100%;
 }
 .login-details p {
   font-size: 13px;
@@ -690,6 +695,7 @@ form.example button:hover {
   position: absolute;
   left: 59%;
   top: 56%;
+  margin-top: 28px;
 }
 .details_image img {
   width: 100%;
