@@ -95,18 +95,6 @@ function ResidentForm() {
     setStreet(event.target.value);
   };
 
-  const handlePreviousOwner = (event) => {
-    setPreviousOwnerName(event.target.value);
-  };
-
-  const handlePreviousPhone = (event) => {
-    setPreviousOwnerPhone(event.target.value);
-  };
-
-  const handlePreviousEmail = (event) => {
-    setPreviousOwnerEmail(event.target.value);
-  };
-
   const handleAvatarChange = (e) => {
     const file = e.target.files[0];
     setAvatar(file);
@@ -125,6 +113,15 @@ function ResidentForm() {
 
   const handleSubmit = async () => {
     
+    const emailExists = homes.some(home => home.residents.some(resident => resident.email === email));
+
+    if (emailExists) {
+      alert(
+        <span style={{ color: 'red' }}>
+          'Email already exists. Please choose a different email.'
+        </span>
+      );
+    }
 
     const formData = new FormData();
     formData.append('firstname', firstname);
@@ -141,9 +138,7 @@ function ResidentForm() {
     formData.append('other_status', other_status);
     formData.append('address', address);
     formData.append('user_id', is_logged_in);
-    // formData.append('previousOwnerEmail', previousOwnerEmail);
-    // formData.append('previousOwnerPhone', previousOwnerPhone);
-    // formData.append('previousOwnerName', previousOwnerName);
+    
 
     try {
       const response = await axios.post(
@@ -437,48 +432,7 @@ function ResidentForm() {
                     </div>
                   </div>
                   <br />
-                  {/* <div className='text-details d-flex justify-content-between'>
-                    <h4>Previous_Owner Name:</h4>
-                    <div>
-                      <input
-                        type='text'
-                        name='previousOwnerName'
-                        placeholder='Enter Name'
-                        value={previousOwnerName}
-                        onChange={handlePreviousOwner}
-                        autoComplete='none'
-                      />
-                    </div>
-                  </div>
-                  <br />
-                  <div className='text-details d-flex justify-content-between'>
-                    <h4>Previous_Owner Email:</h4>
-                    <div>
-                      <input
-                        type='text'
-                        name='previousOwnerEmail'
-                        placeholder='Enter Email'
-                        value={previousOwnerEmail}
-                        onChange={handlePreviousEmail}
-                        autoComplete='none'
-                      />
-                    </div>
-                  </div>
-                  <br />
-                  <div className='text-details d-flex justify-content-between'>
-                    <h4>Previous_Owner Phone:</h4>
-                    <div>
-                      <input
-                        type='text'
-                        name='previousOwnerPhone'
-                        placeholder='Enter Phone No.'
-                        value={previousOwnerPhone}
-                        onChange={handlePreviousPhone}
-                        autoComplete='none'
-                      />
-                    </div>
-                  </div>
-                  <br /> */}
+                  
 
                   <div className='resident-button'>
                     <button

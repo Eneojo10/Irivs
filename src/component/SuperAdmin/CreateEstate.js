@@ -48,8 +48,19 @@ function CreateEstate() {
         email,
         phone,
         password,
-        estate_id,
+        estate_id: selectedEstate,
       };
+
+      const existingEmail = estates.find((estate) => estate._id === selectedEstate)?.admins.find((admin) => admin.email === email);
+
+      if (existingEmail) {
+        alert(
+          <span style={{ color: 'red' }}>
+            Email already exists in the selected estate.
+          </span>
+        );
+        return;
+      }
 
       const response = await axios.post(
         'https://garen-server.onrender.com/admin',
