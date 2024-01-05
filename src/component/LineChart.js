@@ -11,7 +11,7 @@ import {
 ChartJS.register(BarElement, CategoryScale, LinearScale, Legend, Tooltip);
 
 function LineChart({ paymentData }) {
-  // console.log(paymentData);
+  
   const labels = paymentData?.labels || [];
   const amounts = paymentData?.data || [];
 

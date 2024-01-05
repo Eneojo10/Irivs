@@ -8,7 +8,7 @@ import axios from 'axios';
 import LineChart from './LineChart';
 import { ReportContext } from './Reports/ReportContext';
 import { Link } from 'react-router-dom';
-// import Footer from './Footer';
+
 
 
 function Panel() {
