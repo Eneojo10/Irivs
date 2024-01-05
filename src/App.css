@@ -1428,6 +1428,346 @@ li:last-child {
     padding-right: 5px;
   }
 }
+@media(max-width: 428px) {
+  .rr {
+    display: none;
+  }
+  .config_box {
+    display: block;
+  }
+  .boxx_ {
+    width: 100%;
+  }
+  .config_border {
+    height: 157vh;
+  }
+  .generate_input_field {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .generate_input_field input {
+    width: 100%;
+  }
+  .form_details {
+    display: block;
+  }
+  .main--side {
+    width: 100%;
+  }
+  .super-color {
+    width: 100%;
+  }
+  .table__records {
+    overflow-x: auto;
+    margin-top: 7px;
+  }
+  .col{
+    display: none;
+  }
+  .table {
+    width: 100%;
+  }
+  .table th,
+  .table td {
+    white-space: nowrap;
+    min-width: 100px;
+  }
+  .form_details {
+    display: none;
+  }
+  .form_details_media {
+    display: block;
+    padding-top: 30px;
+    width: 90%;
+    margin: auto;
+  }
+  .example {
+    display: none;
+  }
+  .table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+  }
+  .ham {
+    display: block;
+    margin-top: 10px;
+  }
+  .media_card {
+    margin-top: -70px;
+    margin-bottom: 25px;
+  }
+  .media_1 {
+    padding: 7px;
+  }
+  .media_card_section {
+    display: flex;
+    width: 100%;
+  }
+  .mediaCard_sec1 {
+    margin-bottom: 10px;
+  }
+  .mediaCard_sec3 {
+    margin-bottom: 10px;
+  }
+  .tabsTwo {
+    display: none;
+  }
+  .barchart {
+    width: 100%;
+  }
+  .tabsTwwo {
+    display: block;
+    margin-top: -140px;
+  }
+  .x-box {
+    width: 30%;
+    height: 120px;
+  }
+  .pending__reports {
+    margin-top: 80px;
+  }
+  .pending__reports h5 {
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .pending-box {
+    height: 9px;
+    width: 10%;
+    margin-top: 85px;
+  }
+  .users {
+    display: none;
+  }
+  .users_ {
+    width: 100%;
+  }
+  .all_residents-inputfield {
+    display: none;
+  }
+  .user-input-field {
+    display: none;
+  }
+  .user-input-field_ {
+    display: block;
+  }
+  .in-put-one {
+    width: 100%;
+  }
+  .in-put-one input {
+    width: 100%;
+  }
+  .all-residents__ {
+    height: 270px;
+  }
+  .com-card-one h5 {
+    font-size: 18px;
+  }
+  .com-card-two h5 {
+    font-size: 18px;
+  }
+  .com-card-three h5 {
+    font-size: 16px;
+  }
+  .residents-details {
+    width: 95%;
+    margin: auto;
+    display: none;
+  }
+  .residents-details-media {
+    display: block;
+  }
+  .residents_button {
+    font-size: 11px;
+  }
+  .date-section {
+    width: 67%;
+  }
+  .sel-ect {
+    width: 69%;
+  }
+  .residents_File {
+    width: 70%;
+  }
+  .all_residents--inputfield {
+    display: block;
+    margin-top: 20px;
+  }
+  .media_input {
+    width: 95%;
+    display: flex;
+    gap: 15px;
+  }
+  .input-field {
+    width: 51%;
+  }
+  .input-field input {
+    width: 100%;
+  }
+  .media_input2 input {
+    width: 90%;
+  }
+  .all-residents_ {
+    height: 125px;
+  }
+  .main-panel {
+    height: 700px;
+    width: 100%;
+  }
+  .dropdown___details {
+    width: 55%;
+  }
+  .dropdown___details_ {
+    width: 83%;
+  }
+  .dropdown___details__ {
+    width: 70%;
+  }
+  .drop__down {
+    height: 220px;
+  }
+  .profile-details {
+    display: none;
+  }
+  .media_profile {
+    display: block;
+    width: 95%;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+  }
+  .med_profile input {
+    background-color: #edf3f8;
+    padding: 5px 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+  }
+  .all_mediainput {
+    margin-top: 70px;
+  }
+  .profile-section {
+    display: none;
+  }
+  .residents-border {
+    height: 200vh;
+  }
+  .media__profile-section {
+    width: 35%;
+    margin-top: -85px;
+  }
+  .signup-page {
+    height: 650px;
+  }
+  .sign--up {
+    width: 95%;
+  }
+  .login-border {
+    width: 45%;
+  }
+  .login-form {
+    width: 70%;
+  }
+  .password-icon {
+    position: absolute;
+    left: 75%;
+    top: 47%;
+    display: none;
+  }
+  .profile__image {
+    width: 100%;
+  }
+  .profile__image img {
+    height: 150px;
+  }
+  .da_te {
+    width: 100%;
+  }
+  .da_te input {
+    width: 100%;
+  }
+  .pen-ding {
+    width: 25%;
+  }
+  .user-input-fieldd {
+    display: block;
+  }
+  .artisan_left {
+    display: none;
+  }
+  .artisan-border {
+    display: none;
+  }
+  .artisan-border_ {
+    display: block;
+  }
+  .artisan_details {
+    display: none;
+  }
+  .artisan_details_ {
+    display: block;
+  }
+  .artisanImage img {
+    height: 250px;
+  }
+  .report__feild_ {
+    width: 90%;
+  }
+  .radio_btn {
+    width: 60%;
+  }
+  .sendreport-border {
+    height: 105vh;
+  }
+  .admin--cardholder {
+    display: none;
+  }
+  .admin__cards {
+    display: block;
+    width: 95%;
+    margin: auto;
+  }
+  .admin-card_One {
+    width: 100%;
+  }
+  .adminbaord-text {
+    padding: 85px;
+  }
+  .sub-admin-form {
+    width: 100%;
+  }
+  .x-box-cont {
+    width: 40%;
+    margin: auto;
+  }
+  .card-color{
+    height: 28px;
+    margin-top: 11px;
+    width: 16%;
+    margin-right: 5px;
+  }
+  .card-colorTwo{
+    height: 28px;
+    margin-top: 11px;
+    width: 16%;
+    margin-right: 5px;
+  }
+  .card-colorThr{
+    height: 29px;
+    margin-top: 11px;
+    width: 16%;
+    margin-right: 5px;
+  }
+  .card-colorFr{
+    height: 29px;
+    margin-top: 11px;
+    width: 16%;
+  }
+  .card-icon{
+    padding-right: 5px;
+  }
+  
+}
 @media (min-width: 481px) and (max-width: 767px) {
   .login-border {
     width: 40%;
@@ -1546,18 +1886,6 @@ li:last-child {
   }
   .login-form {
     width: 55%;
-  }
-}
-@media (min-width: 428px) {
-  .sign--up{
-    width: 95%;
-    margin: auto;
-  }
-  .login-form{
-    width: 70%;
-  }
-  .password-icon{
-    display: none;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
