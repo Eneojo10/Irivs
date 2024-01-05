@@ -1556,6 +1556,9 @@ li:last-child {
   .login-form{
     width: 70%;
   }
+  .password-icon{
+    display: none;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .signup-page {
