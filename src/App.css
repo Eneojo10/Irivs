@@ -1548,6 +1548,15 @@ li:last-child {
     width: 55%;
   }
 }
+@media (min-width: 428px) {
+  .sign--up{
+    width: 95%;
+    margin: auto;
+  }
+  .login-form{
+    width: 70%;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .signup-page {
     height: 240vh;
