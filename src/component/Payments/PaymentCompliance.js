@@ -3,7 +3,7 @@ import Compo from '../Compo';
 import Navigation from '../Navigation';
 import LineChart from '../LineChart';
 import axios from 'axios';
-import { AuthContext } from '../Login/AuthContext';
+
 
 function PaymentCompliance() {
   const [paymentData, setPaymentData] = useState([]);

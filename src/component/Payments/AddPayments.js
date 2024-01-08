@@ -12,7 +12,6 @@ import Navigation from '../Navigation';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import { AuthContext } from '../Login/AuthContext';
 
 function AddPayments() {
   const [payments, setPayments] = useState([]);
@@ -45,7 +44,7 @@ function AddPayments() {
             },
           }
         );
-        // console.log('Response:', response);
+        
         setPayments(response.data);
       } catch (error) {
         console.error(error);
@@ -103,13 +102,13 @@ function AddPayments() {
   }
 
   function handleUpdate(paymentId, data) {
-    let url = `http://localhost:5000/payments/${paymentId}`;
+    let url = `https://garen-server.onrender.com/payments/${paymentId}`;
     axios
       .put(url, data)
       .then((response) => {
         console.log(response.data);
         setEdit(false);
-        // fetchPayments();
+        
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -118,7 +117,7 @@ function AddPayments() {
 
   function handleDelete(index) {
     let paymentDetail = payments[index];
-    let url = `http://localhost:5000/payments/${paymentDetail._id}`;
+    let url = `https://garen-server.onrender.com/payments/${paymentDetail._id}`;
     console.log(paymentDetail._id);
     fetch(url, {
       method: 'DELETE',
@@ -359,7 +358,7 @@ function AddPayments() {
                                   type='text'
                                   onKeyPress={handleKeyPress}
                                   name='lastname'
-                                  value={firstname}
+                                  value={lastname}
                                   placeholder='Last_name'
                                   onChange={handleNameChange}
                                   autoComplete='off'
