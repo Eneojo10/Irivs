@@ -1743,7 +1743,7 @@ li:last-child {
   .card-color{
     height: 28px;
     margin-top: 11px;
-    width: 16%;
+    width: 22%;
     margin-right: 5px;
   }
   .card-colorTwo{
@@ -1765,6 +1765,9 @@ li:last-child {
   }
   .card-icon{
     padding-right: 5px;
+  }
+  .nav_settings{
+    width: 15%;
   }
   
 }

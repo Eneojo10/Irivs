@@ -189,7 +189,7 @@ function AddPayments() {
                     <div className='input-field'>
                       <input
                         type='text'
-                        placeholder='Enter identification code'
+                        placeholder='identification code'
                       />
                     </div>
                     <div className='input-field'>

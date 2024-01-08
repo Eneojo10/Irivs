@@ -4,7 +4,7 @@ import Navigation from '../Navigation';
 import image from '../image/user2.jpg';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { AuthContext } from '../Login/AuthContext';
+
 
 function AddArtisan() {
   const [artisan, setArtisan] = useState([]);
@@ -101,9 +101,9 @@ function AddArtisan() {
                           textAlign: 'center',
                         }}
                       >
-                        <h5>{artisanItem.fullname}</h5>
-                        <p>{artisanItem.phone}</p>
-                        <p>{artisanItem.email}</p>
+                        <h5>{artisanItem.artisanFullname}</h5>
+                        <p>{artisanItem.artisanSpecialty}</p>
+                        <p>{artisanItem.artisanContact}</p>
                         <p>{artisanItem.address}</p>
                       </div>
 
